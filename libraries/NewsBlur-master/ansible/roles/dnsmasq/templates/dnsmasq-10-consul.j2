@@ -1,0 +1,18 @@
+server=/consul/127.0.0.1#8600
+
+{# Upstream DNS servers -#}
+{% for server in consul_dnsmasq_servers -%}
+    server={{ server }}
+{% endfor -%}
+
+{# dnsmasq should not needlessly read /etc/resolv.conf #}
+no-resolv
+
+interface=lo
+interface=eth0
+interface=eth1
+
+bind-interfaces
+# log-dhcp
+# log-queries
+# log-facility=/var/log/dnsmasq.log

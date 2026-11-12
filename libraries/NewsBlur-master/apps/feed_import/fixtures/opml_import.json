@@ -1,0 +1,10 @@
+[
+    {
+        "pk": 1,
+        "model": "reader.usersubscriptionfolders",
+        "fields": {
+            "folders": "[{\"Tech\": [4, 5]}, 1, 2, 3, 6]",
+            "user": 1
+        }
+    }
+]
